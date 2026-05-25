@@ -56,7 +56,7 @@ cp .env.example .env
 ### 2. Start with Docker Compose
 
 ```bash
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 This starts all 8 services:
