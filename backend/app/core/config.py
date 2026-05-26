@@ -45,11 +45,11 @@ class Settings(BaseSettings):
     QDRANT_COLLECTION_PREFIX: str = "agent_"
 
     # ── Ollama ──
-    OLLAMA_URL: str = "http://localhost:11434"
+    OLLAMA_URL: str = "http://ollama:11434/v1"
 
     # ── OpenAI ──
-    OPENAI_API_KEY: str = ""
-    OPENAI_DEFAULT_MODEL: str = "gpt-4o-mini"
+    OPENAI_API_KEY: str = "ollama"
+    OPENAI_DEFAULT_MODEL: str = "llama3.1:8b "
 
     # ── Embeddings ──
     EMBEDDING_MODEL: str = "text-embedding-3-small"
