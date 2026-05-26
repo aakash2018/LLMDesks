@@ -1,0 +1,50 @@
+# ─── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Node.js ──────────────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# ─── Uploads ──────────────────────────────────────────────────────────────────
+backend/uploads/
+*.pdf
+*.csv
+
+# ─── Docker volumes ───────────────────────────────────────────────────────────
+postgres_data/
+mongo_data/
+redis_data/
+qdrant_data/
+ollama_data/
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
