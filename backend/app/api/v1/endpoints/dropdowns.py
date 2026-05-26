@@ -52,8 +52,8 @@ async def get_llm_models():
         DropdownOption(value="gpt-4-turbo", label="GPT-4 Turbo", description="High capability, large context"),
         DropdownOption(value="gpt-3.5-turbo", label="GPT-3.5 Turbo", description="Fastest, most economical"),
         # Ollama (local)
-        DropdownOption(value="ollama/llama3.2", label="Llama 3.2 (Local)", description="Meta's open-source model via Ollama"),
-        DropdownOption(value="ollama/mistral", label="Mistral 7B (Local)", description="Efficient open-source model"),
+        DropdownOption(value="deepseek-v3.1:671b-cloud ", label="deepseek-v3.1:671b-cloud (Local)", description="Meta's open-source model via Ollama"),
+        DropdownOption(value="llama3.1:8b", label="llama3.1:8b", description="Efficient open-source model"),
         DropdownOption(value="ollama/codellama", label="Code Llama (Local)", description="Optimised for code generation"),
         DropdownOption(value="ollama/gemma2", label="Gemma 2 (Local)", description="Google's open model via Ollama"),
     ]

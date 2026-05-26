@@ -199,11 +199,13 @@ export default function ChatPage() {
           content: useChatStore.getState().streamingContent,
           timestamp: new Date().toISOString(),
         };
+        console.log("Final assistant message:", assistantMsg);
         finalizeStreaming(assistantMsg);
         setAttachedFile(null);
         qc.invalidateQueries({ queryKey: ["chat-history", agentId] });
       },
       (err) => {
+        console.log(err);
         toast.error(err);
         setStreaming(false);
       }

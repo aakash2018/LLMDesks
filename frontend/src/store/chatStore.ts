@@ -24,6 +24,13 @@ interface ChatStore {
   reset: () => void;
 }
 
+const safeConcat = (prev: string, chunk: string): string => {
+  if (prev && !prev.endsWith(" ") && !chunk.startsWith(" ")) {
+    return prev + " " + chunk;
+  }
+  return prev + chunk;
+};
+
 export const useChatStore = create<ChatStore>()(
   devtools(
     (set) => ({
@@ -42,7 +49,9 @@ export const useChatStore = create<ChatStore>()(
         set((state) => ({ messages: [...state.messages, message] })),
 
       appendStreamChunk: (chunk) =>
-        set((state) => ({ streamingContent: state.streamingContent + chunk })),
+        set((state) => ({
+          streamingContent: safeConcat(state.streamingContent, chunk)
+        })),
 
       finalizeStreaming: (assistantMessage) =>
         set((state) => ({

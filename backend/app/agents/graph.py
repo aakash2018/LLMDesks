@@ -38,6 +38,7 @@ def get_llm(model: str = settings.OPENAI_DEFAULT_MODEL, streaming: bool = True) 
         model=model,
         streaming=streaming,
         temperature=0.1,
+        base_url=settings.OLLAMA_URL,
         api_key=settings.OPENAI_API_KEY,
     )
 

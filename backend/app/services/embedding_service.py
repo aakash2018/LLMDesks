@@ -28,7 +28,8 @@ logger = structlog.get_logger()
 def get_embeddings() -> OpenAIEmbeddings:
     return OpenAIEmbeddings(
         model=settings.EMBEDDING_MODEL,
-        api_key=settings.OPENAI_API_KEY,
+        api_key="ollama",
+        base_url=settings.OLLAMA_URL,
     )
 
 
